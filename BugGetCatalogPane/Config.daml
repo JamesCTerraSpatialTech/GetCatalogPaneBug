@@ -24,18 +24,27 @@
         <!--<tab id="BugGetCatalogPane_Tab1" caption="New Tab">
           <group refID="BugGetCatalogPane_Group1"/>
         </tab>-->
+        <tab id="Test_Primary" caption="Test" keytip="">
+          <group refID="Test_Group" />
+        </tab>
       </tabs>
               
       <groups>
         <!-- comment this out if you have no controls on the Addin tab to avoid
               an empty group-->
-        <group id="BugGetCatalogPane_Group1" caption="Group 1" appearsOnAddInTab="true">
-          <!-- host controls within groups -->
+        <group id="Test_Group" caption="Test Group" appearsOnAddInTab="true">
+          <button refID="Test_Reports" size="large" />
         </group>
+          <!-- host controls within groups -->
       </groups>
       
       <controls>
         <!-- add your controls here -->
+        <button id="Test_Reports" keytip="Reports" caption="Reports" 
+                className="ReportsButton" loadOnClick="true" disableIfBusy="true">
+          <tooltip heading="Reports">
+          Open the Reports section<disabledText /></tooltip>
+        </button>
       </controls> 
       
     </insertModule>
